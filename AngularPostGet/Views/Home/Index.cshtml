@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<html ng-app="myApp">
+<head>
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/Module.js"></script>
+    <script src="../Scripts/Service.js"></script>
+    <script src="../Scripts/EmpController.js"></script>
+
+
+</head>
+
+<body>
+    <div data-ng-controller="myController" ng-init="GetAllEmp()">
+        <table>
+            <thead>
+                <tr>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in employee">
+                    <td>{{item.FirstName}}</td>
+                    <td>{{item.LastName}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+
+
+</html>
